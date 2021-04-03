@@ -7,7 +7,7 @@ RUN git clone https://github.com/jonbos/CaucusCalculator.git
 
 RUN cd ./CaucusCalculator/ && mvn package
 
-RUN pwd
+RUN ls -la
 
 
 RUN cd ./CaucusCalculator/ && cp ./target/CaucusCalculator-0.0.1-SNAPSHOT.war /var/lib/tomcat9/webapps/
