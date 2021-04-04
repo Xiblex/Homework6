@@ -1,7 +1,5 @@
 FROM tomcat:latest
-RUN apt-get update
-RUN apt-get install maven -y
-RUN apt-get install git -y
+RUN apt-get update && apt-get install maven -y && apt-get install git -y
 
 RUN git clone https://github.com/jonbos/CaucusCalculator.git
 
