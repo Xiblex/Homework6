@@ -1,13 +1,13 @@
 FROM ubuntu:latest
 
 RUN apt-get update && apt-get install - y \
-                            maven \ 
-                            git \
-                            wget
+                            maven \
+                            git 
 
-RUN mkdir -p /usr/local/tomcat \
-    &&  https://mirrors.nav.ro/apache/tomcat/tomcat-9/v9.0.44/bin/apache-tomcat-9.0.44.tar.gz -O /tmp/tomcat.tar.gz \
-    | cd /tmp && tar xvfz /tmp/tomcat.tar.gz \
+RUN apt-get install wget \
+    && mkdir -p /usr/local/tomcat \
+    && wget https://mirrors.nav.ro/apache/tomcat/tomcat-9/v9.0.44/bin/apache-tomcat-9.0.44.tar.gz -O /tmp/tomcat.tar.gz \
+    && cd /tmp && tar xvfz /tmp/tomcat.tar.gz \
     && ls -la
 
 #RUN git clone https://github.com/jonbos/CaucusCalculator.git
