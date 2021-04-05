@@ -9,6 +9,7 @@ RUN apt-get install wget \
     && cp -Rv /tmp/apache-tomcat-9.0.44/* /usr/local/tomcat/
 
 RUN git clone https://github.com/jonbos/CaucusCalculator.git
+RUN  pwd && ls -la 
 WORKDIR /usr/local/tomcat/CaucusCalculator/
 RUN  pwd && ls -la && mvn package
 
