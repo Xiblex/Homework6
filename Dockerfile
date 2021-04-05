@@ -1,9 +1,12 @@
 FROM ubuntu:latest
 
-RUN apt-get update && apt-get install maven -y && apt-get install git -y
+RUN apt-get update && apt-get install - y \
+                            maven \ 
+                            git \
+                            wget
 
 RUN mkdir -p /usr/local/tomcat \
-    && wget https://mirrors.nav.ro/apache/tomcat/tomcat-9/v9.0.44/bin/apache-tomcat-9.0.44.tar.gz -O /tmp/tomcat.tar.gz \
+    &&  https://mirrors.nav.ro/apache/tomcat/tomcat-9/v9.0.44/bin/apache-tomcat-9.0.44.tar.gz -O /tmp/tomcat.tar.gz \
     | cd /tmp && tar xvfz /tmp/tomcat.tar.gz \
     && ls -la
 
