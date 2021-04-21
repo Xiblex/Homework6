@@ -6,7 +6,7 @@ RUN apt-get update \
     && apt-get install wget 
 
 RUN mkdir -p /usr/local/tomcat \
-    && wget https://mirrors.nav.ro/apache/tomcat/tomcat-9/v9.0.44/bin/apache-tomcat-9.0.44.tar.gz -O /tmp/tomcat.tar.gz \
+    && wget https://apache-mirror.rbc.ru/pub/apache/tomcat/tomcat-9/v9.0.45/bin/apache-tomcat-9.0.45-fulldocs.tar.gz -O /tmp/tomcat.tar.gz \
     && cd /tmp && tar xvfz /tmp/tomcat.tar.gz \
     && cp -Rv /tmp/apache-tomcat-9.0.44/* /usr/local/tomcat/
 
